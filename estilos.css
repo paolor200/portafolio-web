@@ -1,0 +1,123 @@
+/* 1. COLORES: cambia estos valores para personalizar todo el sitio. */
+:root {
+  --fondo: #f6f5f0;
+  --texto: #203a36;
+  --secundario: #596762;
+  --acento: #2563eb;
+  --panel: #203e38;
+  --linea: #d8ded5;
+}
+
+/* 2. BASE: las medidas incluyen el relleno y los bordes. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--acento); outline-offset: 6px; }
+p, h1, h2, h3, h4 { margin-top: 0; }
+.contenedor { width: min(1100px, 88%); margin-inline: auto; }
+.saltar { position: absolute; left: 20px; top: -80px; padding: 10px; background: white; }
+.saltar:focus { top: 10px; z-index: 2; }
+
+/* 3. ENCABEZADO Y NAVEGACIÓN. */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 108px;
+  border-bottom: 1px solid var(--linea);
+}
+.marca { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 19px; }
+.simbolo { color: var(--acento); font-family: monospace; font-size: 24px; font-weight: 700; }
+nav { display: flex; flex-wrap: wrap; gap: 30px; font-size: 14px; font-weight: 600; }
+nav a:hover, .pie a:hover { color: var(--acento); }
+
+/* 4. PRESENTACIÓN: dos columnas en computadora. */
+.presentacion {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding-block: 78px 88px;
+}
+.introduccion, .ficha, .resumen, .aprendizaje { min-width: 0; overflow-wrap: anywhere; }
+.etiqueta { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+.introduccion > .etiqueta { display: flex; align-items: center; gap: 9px; margin-bottom: 28px; }
+.punto { width: 7px; height: 7px; border-radius: 50%; background: var(--acento); flex-shrink: 0; }
+h1 { font-size: clamp(40px, 5.4vw, 70px); line-height: 1.08; letter-spacing: -3px; font-weight: 650; margin-bottom: 25px; }
+h1 span { color: var(--acento); }
+.descripcion { max-width: 440px; font-size: 17px; color: var(--secundario); margin-bottom: 28px; }
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  background: var(--texto);
+  color: white;
+  padding: 14px 22px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.boton:hover { background: var(--acento); }
+.nota { color: var(--secundario); font-size: 12px; margin-top: 19px; margin-bottom: 0; }
+
+/* 5. FICHA DEL ESTUDIANTE. */
+.ficha { background: var(--panel); color: #f6f5f0; padding: 32px 34px 25px; border-radius: 10px; }
+.cabecera-ficha { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.cabecera-ficha .etiqueta { margin: 0; color: #c5d2c4; }
+.numero { font-size: 13px; color: #c5d2c4; }
+.ficha h2 { font-size: 32px; line-height: 1.15; font-weight: 500; letter-spacing: -1px; margin-bottom: 25px; }
+dl { margin: 0; }
+dl > div { border-top: 1px solid #486157; padding-block: 13px; }
+dt { color: #c5d2c4; font-size: 11px; margin-bottom: 2px; }
+dd { font-size: 15px; font-weight: 500; margin: 0; }
+.pie-ficha { border-top: 1px solid #486157; padding-top: 18px; margin: 4px 0 0; font-size: 11px; color: #c5d2c4; }
+.pie-ficha span { color: #edc98e; margin-right: 7px; }
+
+/* 6. PROYECTO Y APRENDIZAJE. */
+.proyecto { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; border-top: 1px solid var(--linea); padding-block: 58px 65px; }
+.resumen .etiqueta { color: var(--acento); margin-bottom: 17px; }
+.resumen h2 { font-size: 37px; line-height: 1.12; letter-spacing: -1.3px; font-weight: 600; margin-bottom: 18px; }
+.resumen > p:not(.etiqueta) { color: var(--secundario); font-size: 15px; max-width: 390px; }
+.tecnologias { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 22px 0 0; }
+.tecnologias li { padding: 4px 10px; border: 1px solid var(--linea); border-radius: 4px; font-size: 11px; }
+.aprendizaje h3 { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.aprendizaje ol { list-style: none; padding: 0; margin: 0; }
+.aprendizaje li { display: flex; gap: 20px; border-bottom: 1px solid var(--linea); padding-block: 17px; }
+.aprendizaje li > span { font-size: 11px; color: var(--acento); padding-top: 4px; }
+.aprendizaje h4 { font-size: 16px; margin-bottom: 3px; font-weight: 600; }
+.aprendizaje p { color: var(--secundario); font-size: 13px; margin: 0; }
+
+/* 7. PIE DE PÁGINA. */
+.pie { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid var(--linea); padding-block: 25px; font-size: 11px; color: var(--secundario); }
+.pie p { margin: 0; }
+.pie p:first-child { font-weight: 700; color: var(--texto); }
+
+/* 8. CELULARES Y TABLETS: las columnas se apilan automáticamente. */
+@media (max-width: 800px) {
+  .presentacion { grid-template-columns: 1fr; gap: 36px; padding-block: 44px 48px; }
+  .descripcion { max-width: 560px; }
+  .ficha { padding: 28px; }
+  .ficha h2 br { display: none; }
+  .proyecto { grid-template-columns: 1fr; gap: 35px; padding-block: 40px; }
+  .resumen > p:not(.etiqueta) { max-width: none; }
+  .pie { flex-wrap: wrap; }
+}
+@media (max-width: 420px) {
+  .encabezado { flex-wrap: wrap; justify-content: flex-start; gap: 10px; padding-block: 20px; }
+  nav { width: 100%; gap: 24px; }
+  h1 { letter-spacing: -1.8px; }
+  .ficha { padding-inline: 22px; }
+  .pie { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

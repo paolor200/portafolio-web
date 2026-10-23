@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio académico: presentación del estudiante y primer proyecto web.">
+  <title>Mi portafolio académico</title>
+  <!-- Este enlace conecta el contenido HTML con los estilos CSS. -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#inicio">Ir al contenido</a>
+
+  <!-- ENCABEZADO: nombre del sitio y enlaces dentro de esta misma página. -->
+  <header class="encabezado contenedor">
+    <a class="marca" href="#inicio" aria-label="Mi portafolio, inicio">
+      <span class="simbolo" aria-hidden="true">&lt;/&gt;</span>
+      Mi portafolio
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyecto">Mi proyecto <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PRESENTACIÓN: reemplaza los textos entre corchetes por tus datos. -->
+    <section id="inicio" class="presentacion contenedor" aria-labelledby="titulo">
+      <div class="introduccion">
+        <p class="etiqueta"><span class="punto" aria-hidden="true"></span> Portafolio académico</p>
+        <h1 id="titulo">Hola, soy<br><span>Paolo Centeno</span>.</h1>
+        <!-- Puedes escribir aquí una presentación breve con tus propias palabras. -->
+        <p class="descripcion">Este es mi primer portafolio web. Un espacio para presentarme, compartir mi proyecto y comenzar a explorar el desarrollo web.</p>
+        <a class="boton" href="#proyecto">Conoce mi proyecto <span aria-hidden="true">↓</span></a>
+        <p class="nota">Una página. Un primer paso. Mucho por aprender.</p>
+      </div>
+
+      <aside class="ficha" aria-labelledby="titulo-ficha">
+        <div class="cabecera-ficha">
+          <p class="etiqueta">Presentación</p>
+          <span class="numero" aria-hidden="true">01</span>
+        </div>
+        <h2 id="titulo-ficha">Mis datos<br>académicos.</h2>
+        <dl>
+          <div><dt>Código universitario</dt><dd>2152894798</dd></div>
+          <div><dt>Curso</dt><dd>Cloud computing y arquitecturas digitales</dd></div>
+          <!-- Universidad es un dato adicional; puedes quitar esta fila. -->
+          <div><dt>Universidad</dt><dd>Autonoma del Perú</dd></div>
+          <div><dt>Fecha de entrega</dt><dd>23/10/2026</dd></div>
+        </dl>
+        <p class="pie-ficha"><span aria-hidden="true">✦</span> Aprendiendo a crear para la web</p>
+      </aside>
+    </section>
+
+    <!-- PROYECTO: sección adicional breve para explicar el ejercicio. -->
+    <section id="proyecto" class="proyecto contenedor" aria-labelledby="titulo-proyecto">
+      <div class="resumen">
+        <p class="etiqueta">Mi proyecto / 01</p>
+        <h2 id="titulo-proyecto">Del archivo<br>al navegador.</h2>
+        <p>Este sitio es el proyecto: una página de presentación construida con HTML y CSS, preparada para compartirse mediante un enlace público.</p>
+        <ul class="tecnologias" aria-label="Tecnologías del proyecto">
+          <li>HTML</li><li>CSS</li><li>Diseño adaptable</li>
+        </ul>
+      </div>
+      <div class="aprendizaje">
+        <h3>Lo que exploro con este ejercicio</h3>
+        <ol>
+          <li><span>01</span><div><h4>Estructura</h4><p>Organizar títulos, textos y enlaces con HTML.</p></div></li>
+          <li><span>02</span><div><h4>Diseño</h4><p>Dar color, espacio y orden al contenido con CSS.</p></div></li>
+          <li><span>03</span><div><h4>Publicación</h4><p>Llevar los archivos a Internet y compartir la URL del sitio.</p></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie contenedor">
+    <p>Mi portafolio académico</p>
+    <p>Hecho paso a paso, con HTML y CSS.</p>
+    <a href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
