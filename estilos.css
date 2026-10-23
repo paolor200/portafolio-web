@@ -50,6 +50,17 @@ nav a:hover, .pie a:hover { color: var(--acento); }
 .introduccion, .ficha, .resumen, .aprendizaje { min-width: 0; overflow-wrap: anywhere; }
 .etiqueta { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 .introduccion > .etiqueta { display: flex; align-items: center; gap: 9px; margin-bottom: 28px; }
+/* Fotografía de presentación: el borde utiliza el color de acento del sitio. */
+.foto-perfil {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 20px;
+  border: 3px solid var(--acento);
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+}
 .punto { width: 7px; height: 7px; border-radius: 50%; background: var(--acento); flex-shrink: 0; }
 h1 { font-size: clamp(40px, 5.4vw, 70px); line-height: 1.08; letter-spacing: -3px; font-weight: 650; margin-bottom: 25px; }
 h1 span { color: var(--acento); }
